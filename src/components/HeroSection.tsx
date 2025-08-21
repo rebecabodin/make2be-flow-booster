@@ -51,6 +51,11 @@ export const HeroSection = () => {
               variant="outline" 
               size="lg" 
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg"
+              onClick={() => {
+                const message = "Olá! Gostaria de falar com um especialista sobre os serviços de automação.";
+                const whatsappUrl = `https://wa.me/5514996392637?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+              }}
             >
               Falar com Especialista
             </Button>

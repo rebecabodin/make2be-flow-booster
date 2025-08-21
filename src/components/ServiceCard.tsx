@@ -9,6 +9,7 @@ interface ServiceCardProps {
   category: string;
   segments: string[];
   image: string;
+  features: string[];
   onAddToCart: () => void;
 }
 
@@ -18,7 +19,8 @@ export const ServiceCard = ({
   price, 
   category, 
   segments, 
-  image, 
+  image,
+  features,
   onAddToCart 
 }: ServiceCardProps) => {
   return (

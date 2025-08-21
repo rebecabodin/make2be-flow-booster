@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { ServiceCard } from "@/components/ServiceCard";
 import { HeroSection } from "@/components/HeroSection";
+import { ServiceFilters } from "@/components/ServiceFilters";
+import { CheckoutPopup } from "@/components/CheckoutPopup";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useToast } from "@/hooks/use-toast";
 
 // Import images
@@ -15,6 +19,7 @@ const services = [
     title: "Ingresso Personalizado para Instagram",
     description: "Criação de fluxo de entrada no Instagram, incentivando engajamento e redirecionamento estratégico para captação de leads qualificados.",
     price: "R$ 1.200,00",
+    priceValue: 1200,
     category: "Engajamento / Entrada",
     segments: ["Infoprodutores", "Criadores de Conteúdo"],
     image: instagramAutomation,
@@ -25,6 +30,7 @@ const services = [
     title: "Ingresso Personalizado para WhatsApp", 
     description: "Fluxo de entrada otimizado com redirecionamento ao WhatsApp para captura eficiente de leads e início do funil de vendas.",
     price: "R$ 1.200,00",
+    priceValue: 1200,
     category: "Engajamento / Entrada",
     segments: ["Infoprodutores", "E-commerce", "Afiliados"],
     image: whatsappAutomation,
@@ -35,6 +41,7 @@ const services = [
     title: "Fluxo de Engajamento para Comentários",
     description: "Automação inteligente que responde usuários que comentam em posts, direcionando-os estrategicamente para o funil de vendas.",
     price: "R$ 500,00",
+    priceValue: 500,
     category: "Engajamento",
     segments: ["Criadores de Conteúdo", "Influencers"],
     image: engagementAutomation,
@@ -44,7 +51,8 @@ const services = [
     id: 4,
     title: "Captação de Leads - Boas-Vindas WhatsApp",
     description: "Sistema completo de automação para envio de mensagens iniciais via WhatsApp após captação de lead, incluindo integração com LP.",
-    price: "R$ 3.000,00", 
+    price: "R$ 3.000,00",
+    priceValue: 3000,
     category: "Captação de Leads",
     segments: ["Infoprodutores", "E-commerce"],
     image: leadCaptureBasic,
@@ -55,6 +63,7 @@ const services = [
     title: "Captação Avançada - Boas-Vindas + Perseguição",
     description: "Solução premium incluindo mensagem inicial e sequência completa de follow-up automatizado via WhatsApp para maximizar conversões.",
     price: "R$ 4.000,00",
+    priceValue: 4000,
     category: "Captação de Leads", 
     segments: ["Infoprodutores", "E-commerce"],
     image: leadCaptureAdvanced,
@@ -64,12 +73,54 @@ const services = [
 
 export const ServicesLanding = () => {
   const { toast } = useToast();
+  const [selectedSegments, setSelectedSegments] = useState<string[]>([]);
+  const [selectedPriceRange, setSelectedPriceRange] = useState("all");
+  const [checkoutPopup, setCheckoutPopup] = useState<{
+    isOpen: boolean;
+    service: typeof services[0] | null;
+  }>({
+    isOpen: false,
+    service: null
+  });
 
-  const handleAddToCart = (serviceName: string) => {
-    toast({
-      title: "Serviço adicionado!",
-      description: `${serviceName} foi adicionado ao seu carrinho.`,
+  const handleAddToCart = (service: typeof services[0]) => {
+    setCheckoutPopup({
+      isOpen: true,
+      service: service
     });
+  };
+
+  const filterServicesByPrice = (service: typeof services[0]) => {
+    if (selectedPriceRange === "all") return true;
+    
+    const price = service.priceValue;
+    switch (selectedPriceRange) {
+      case "0-1000": return price <= 1000;
+      case "1000-2000": return price > 1000 && price <= 2000;
+      case "2000-3000": return price > 2000 && price <= 3000;
+      case "3000+": return price > 3000;
+      default: return true;
+    }
+  };
+
+  const filterServicesBySegment = (service: typeof services[0]) => {
+    if (selectedSegments.length === 0) return true;
+    return selectedSegments.some(segment => service.segments.includes(segment));
+  };
+
+  const filteredServices = services.filter(service => 
+    filterServicesByPrice(service) && filterServicesBySegment(service)
+  );
+
+  const clearFilters = () => {
+    setSelectedSegments([]);
+    setSelectedPriceRange("all");
+  };
+
+  const handleWhatsAppSpecialist = () => {
+    const message = "Olá! Gostaria de falar com um especialista sobre os serviços de automação.";
+    const whatsappUrl = `https://wa.me/5514996392637?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -94,20 +145,44 @@ export const ServicesLanding = () => {
             </p>
           </div>
 
+          {/* Filters */}
+          <ServiceFilters
+            selectedSegments={selectedSegments}
+            selectedPriceRange={selectedPriceRange}
+            onSegmentChange={setSelectedSegments}
+            onPriceRangeChange={setSelectedPriceRange}
+            onClearFilters={clearFilters}
+          />
+
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <ServiceCard
-                key={service.id}
-                title={service.title}
-                description={service.description}
-                price={service.price}
-                category={service.category}
-                segments={service.segments}
-                image={service.image}
-                onAddToCart={() => handleAddToCart(service.title)}
-              />
-            ))}
+            {filteredServices.length > 0 ? (
+              filteredServices.map((service) => (
+                <ServiceCard
+                  key={service.id}
+                  title={service.title}
+                  description={service.description}
+                  price={service.price}
+                  category={service.category}
+                  segments={service.segments}
+                  image={service.image}
+                  features={service.features}
+                  onAddToCart={() => handleAddToCart(service)}
+                />
+              ))
+            ) : (
+              <div className="col-span-full text-center py-12">
+                <p className="text-xl text-muted-foreground mb-4">
+                  Nenhum serviço encontrado com os filtros selecionados.
+                </p>
+                <button
+                  onClick={clearFilters}
+                  className="text-primary hover:underline font-medium"
+                >
+                  Limpar filtros
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -122,7 +197,10 @@ export const ServicesLanding = () => {
             Entre em contato conosco e descubra como nossas automações podem levar sua empresa ao próximo nível.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-primary hover:opacity-90 transition-opacity px-8 py-4 rounded-lg text-lg font-semibold text-primary-foreground">
+            <button 
+              onClick={handleWhatsAppSpecialist}
+              className="bg-gradient-primary hover:opacity-90 transition-opacity px-8 py-4 rounded-lg text-lg font-semibold text-primary-foreground"
+            >
               Falar com Especialista
             </button>
             <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors px-8 py-4 rounded-lg text-lg">
@@ -146,6 +224,16 @@ export const ServicesLanding = () => {
           </div>
         </div>
       </footer>
+
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
+
+      {/* Checkout Popup */}
+      <CheckoutPopup
+        isOpen={checkoutPopup.isOpen}
+        onClose={() => setCheckoutPopup({ isOpen: false, service: null })}
+        service={checkoutPopup.service}
+      />
     </div>
   );
 };
