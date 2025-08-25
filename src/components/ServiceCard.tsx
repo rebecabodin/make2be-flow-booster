@@ -72,7 +72,7 @@ export const ServiceCard = ({
           className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
           size="lg"
         >
-          Adicionar ao Carrinho
+          {title === "LeadFlow - Instagram" ? "Conheça agora" : "Adicionar ao Carrinho"}
         </Button>
       </CardFooter>
     </Card>

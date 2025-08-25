@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ServicesLanding } from "./pages/ServicesLanding";
+import { LeadFlowProduct } from "./pages/LeadFlowProduct";
 import { CheckoutPage } from "./pages/CheckoutPage";
 import NotFound from "./pages/NotFound";
 
@@ -17,6 +18,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ServicesLanding />} />
+          <Route path="/leadflow-instagram" element={<LeadFlowProduct />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

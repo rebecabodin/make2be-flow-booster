@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ServiceCard } from "@/components/ServiceCard";
 import { HeroSection } from "@/components/HeroSection";
 import { ServiceFilters } from "@/components/ServiceFilters";
@@ -16,14 +17,14 @@ import leadCaptureAdvanced from "@/assets/lead-capture-advanced.jpg";
 const services = [
   {
     id: 1,
-    title: "Ingresso Personalizado para Instagram",
-    description: "Criação de fluxo de entrada no Instagram, incentivando engajamento e redirecionamento estratégico para captação de leads qualificados.",
-    price: "R$ 1.200,00",
-    priceValue: 1200,
+    title: "LeadFlow - Instagram",
+    description: "Ative e engaje sua audiência desde o primeiro toque com o LeadFlow — uma solução estratégica que cria um fluxo inteligente e automatizado para transformar seguidores em leads qualificados no Instagram.",
+    price: "R$ 350,00",
+    priceValue: 350,
     category: "Engajamento / Entrada",
     segments: ["Infoprodutores", "Criadores de Conteúdo"],
     image: instagramAutomation,
-    features: ["Até 5mil leads", "Segmento técnico incluído", "Configuração Manychat + N8N"]
+    features: ["Até 5mil leads", "Fluxo personalizado e automatizado", "Direcionamento estratégico"]
   },
   {
     id: 2,
@@ -73,6 +74,7 @@ const services = [
 
 export const ServicesLanding = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [selectedSegments, setSelectedSegments] = useState<string[]>([]);
   const [selectedPriceRange, setSelectedPriceRange] = useState("all");
   const [checkoutPopup, setCheckoutPopup] = useState<{
@@ -84,6 +86,11 @@ export const ServicesLanding = () => {
   });
 
   const handleAddToCart = (service: typeof services[0]) => {
+    if (service.title === "LeadFlow - Instagram") {
+      navigate('/leadflow-instagram');
+      return;
+    }
+    
     setCheckoutPopup({
       isOpen: true,
       service: service
