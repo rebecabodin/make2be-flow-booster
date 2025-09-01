@@ -28,14 +28,14 @@ const services = [
   },
   {
     id: 2,
-    title: "Ingresso Personalizado para WhatsApp", 
-    description: "Fluxo de entrada otimizado com redirecionamento ao WhatsApp para captura eficiente de leads e início do funil de vendas.",
-    price: "R$ 1.200,00",
-    priceValue: 1200,
+    title: "LeadFlow – WhatsApp", 
+    description: "Ative e capture leads com inteligência usando o LeadFlow – WhatsApp. Integra Instagram e WhatsApp para criar um fluxo de entrada otimizado e personalizado.",
+    price: "R$ 497,00",
+    priceValue: 497,
     category: "Engajamento / Entrada",
-    segments: ["Infoprodutores", "E-commerce", "Afiliados"],
+    segments: ["Infoprodutores", "Criadores de Conteúdo", "E-commerce", "Afiliados", "Clínicas", "Óticas"],
     image: whatsappAutomation,
-    features: ["Até 5mil leads", "Integração WhatsApp", "Configuração Meta + N8N"]
+    features: ["Até 250 leads", "API Oficial Meta", "Fluxo Instagram + WhatsApp"]
   },
   {
     id: 3,
@@ -88,6 +88,11 @@ export const ServicesLanding = () => {
   const handleAddToCart = (service: typeof services[0]) => {
     if (service.title === "LeadFlow - Instagram") {
       navigate('/leadflow-instagram');
+      return;
+    }
+    
+    if (service.title === "LeadFlow – WhatsApp") {
+      navigate('/leadflow-whatsapp');
       return;
     }
     

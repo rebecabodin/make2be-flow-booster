@@ -72,7 +72,7 @@ export const ServiceCard = ({
           className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
           size="lg"
         >
-          {title === "LeadFlow - Instagram" ? "Conheça agora" : "Adicionar ao Carrinho"}
+          {title === "LeadFlow - Instagram" || title === "LeadFlow – WhatsApp" ? "Conheça agora" : "Adicionar ao Carrinho"}
         </Button>
       </CardFooter>
     </Card>

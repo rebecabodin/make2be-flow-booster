@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ServicesLanding } from "./pages/ServicesLanding";
 import { LeadFlowProduct } from "./pages/LeadFlowProduct";
+import { LeadFlowWhatsApp } from "./pages/LeadFlowWhatsApp";
 import { CheckoutPage } from "./pages/CheckoutPage";
 import NotFound from "./pages/NotFound";
 
@@ -19,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<ServicesLanding />} />
           <Route path="/leadflow-instagram" element={<LeadFlowProduct />} />
+          <Route path="/leadflow-whatsapp" element={<LeadFlowWhatsApp />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
