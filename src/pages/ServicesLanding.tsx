@@ -13,6 +13,7 @@ import whatsappAutomation from "@/assets/whatsapp-automation.jpg";
 import engagementAutomation from "@/assets/engagement-automation.jpg";
 import leadCaptureBasic from "@/assets/lead-capture-basic.jpg";
 import leadCaptureAdvanced from "@/assets/lead-capture-advanced.jpg";
+import iassistHero from "@/assets/iassist-hero.jpg";
 
 const services = [
   {
@@ -69,6 +70,17 @@ const services = [
     segments: ["Infoprodutores", "E-commerce"],
     image: leadCaptureAdvanced,
     features: ["Até 5mil leads", "Sequência de follow-up", "Automação avançada completa"]
+  },
+  {
+    id: 6,
+    title: "IAssist – Agente de IA para Atendimento no WhatsApp",
+    description: "O seu atendente digital inteligente, disponível 24h por dia no WhatsApp, que responde dúvidas, qualifica leads e direciona clientes para os fluxos certos com agilidade e precisão.",
+    price: "R$ 1.200,00",
+    priceValue: 1200,
+    category: "Marketing / Vendas",
+    segments: ["E-commerce", "Infoprodutores", "Varejo", "Clínicas", "Imobiliárias", "Óticas", "Academias"],
+    image: iassistHero,
+    features: ["Atendimento 24h", "Respostas humanizadas", "Escalabilidade", "API Oficial e não Oficial"]
   }
 ];
 
@@ -93,6 +105,11 @@ export const ServicesLanding = () => {
     
     if (service.title === "LeadFlow – WhatsApp") {
       navigate('/leadflow-whatsapp');
+      return;
+    }
+    
+    if (service.title === "IAssist – Agente de IA para Atendimento no WhatsApp") {
+      navigate('/iassist');
       return;
     }
     
