@@ -8,7 +8,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useToast } from "@/hooks/use-toast";
 
 // Import images
-import instagramAutomation from "@/assets/instagram-automation.jpg";
+import leadflowInstagramHero from "@/assets/leadflow-instagram-hero.jpg";
 import whatsappAutomation from "@/assets/whatsapp-automation.jpg";
 import engagementAutomation from "@/assets/engagement-automation.jpg";
 import leadCaptureBasic from "@/assets/lead-capture-basic.jpg";
@@ -24,7 +24,7 @@ const services = [
     priceValue: 350,
     category: "Engajamento / Entrada",
     segments: ["Infoprodutores", "Criadores de Conteúdo"],
-    image: instagramAutomation,
+    image: leadflowInstagramHero,
     features: ["Até 5mil leads", "Fluxo personalizado e automatizado", "Direcionamento estratégico"]
   },
   {
