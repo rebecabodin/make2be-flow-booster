@@ -8,7 +8,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useToast } from "@/hooks/use-toast";
 
 // Import images
-import instagramAutomation from "@/assets/instagram-automation.jpg";
+import instagramAutomation from "@/assets/leadflow-instagram-new.jpg";
 import whatsappAutomation from "@/assets/whatsapp-automation.jpg";
 import engagementAutomation from "@/assets/engagement-automation.jpg";
 import leadCaptureBasic from "@/assets/lead-capture-basic.jpg";
