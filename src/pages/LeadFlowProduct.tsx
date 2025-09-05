@@ -12,62 +12,63 @@ const segmentUseCases = {
   "Infoprodutores": [
     {
       title: "Funil de Abertura de Lançamento",
-      description: "Use o LeadFlow como \"pass VIP\" para lives, webinars ou pré-lançamentos, gerando senso de exclusividade e aquecendo o público antes de uma campanha."
+      description: "Use o ingresso como \"pass VIP\" para lives e pré-lançamentos, criando exclusividade e aquecendo leads para suas campanhas."
     },
     {
       title: "Comunidade Exclusiva", 
-      description: "Conceda acesso a grupos fechados, desafios ou masterclasses usando o LeadFlow como chave de entrada, aumentando pertencimento e engajamento."
+      description: "Acesso a grupos de alunos, mentorias ou desafios usando o ingresso VIP como chave de entrada premium."
     }
   ],
   "Criadores de Conteúdo": [
     {
       title: "Ativações Interativas",
-      description: "Ofereça acesso antecipado a bastidores, vídeos inéditos ou enquetes exclusivas, criando experiências que retêm e fidelizam sua audiência."
+      description: "Bastidores, enquetes, drops exclusivos - incentive seguidores a compartilhar seus ingressos nos Stories."
     },
     {
-      title: "Incentivo ao UGC (Conteúdo Gerado pelo Usuário)",
-      description: "Estimule os seguidores a compartilhar seu LeadFlow nos Stories, gerando alcance orgânico e prova social para sua marca."
+      title: "UGC (Conteúdo Gerado pelo Usuário)",
+      description: "Incentive seguidores a compartilhar seus ingressos nos Stories, gerando prova social e alcance orgânico."
     }
   ],
   "E-commerce": [
     {
       title: "Descontos VIP",
-      description: "Use o LeadFlow como acesso exclusivo a cupons ou promoções-relâmpago, aumentando o senso de urgência e as conversões."
+      description: "Ingressos como códigos de desconto exclusivos, criando urgência e aumentando conversões."
     },
     {
-      title: "Lançamentos ou Coleções Exclusivas",
-      description: "Crie uma pré-lista para lançamentos e use o LeadFlow como o \"convite\" para acesso antecipado a produtos limitados."
+      title: "Lançamentos",
+      description: "Acesso antecipado a coleções limitadas usando ingressos VIP como porta de entrada exclusiva."
     }
   ],
   "Afiliados": [
     {
       title: "Tráfego Qualificado",
-      description: "Transforme o LeadFlow em uma porta de entrada para funis, páginas de vendas ou cupons exclusivos, garantindo leads mais quentes e prontos para converter."
+      description: "Ingressos como porta de entrada para páginas de vendas, garantindo leads mais quentes e prontos para converter."
     },
     {
       title: "Campanhas Gamificadas",
-      description: "Integre o LeadFlow a sorteios, rankings ou campanhas de engajamento, criando uma dinâmica viral para aumentar o alcance."
+      description: "Sorteios, rankings e engajamento viral usando ingressos VIP como elemento de gamificação."
     }
   ]
 };
 
 const benefits = [
-  "Fluxo personalizado e totalmente automatizado",
-  "Engajamento estratégico com até 5 mil leads",
-  "Direcionamento certeiro para funis, ofertas ou comunidades",
-  "Experiência premium que conecta audiência e marca"
+  "Exclusividade visível: cada seguidor recebe seu ingresso digital único",
+  "Automação completa: do engajamento à captura, tudo acontece em segundos",
+  "Escalabilidade: até 5.000 leads no plano Basic",
+  "Engajamento real: seguidores compartilham seus ingressos nos Stories, gerando prova social",
+  "Versatilidade: aplicável para lançamentos, eventos, promoções e comunidades VIP"
 ];
 
 const leadFlowService = {
   id: 1,
   title: "LeadFlow - Instagram",
-  description: "Ative e engaje sua audiência desde o primeiro toque com o LeadFlow — uma solução estratégica que cria um fluxo inteligente e automatizado para transformar seguidores em leads qualificados no Instagram.",
+  description: "O LeadFlow vai além do engajamento: ele cria uma experiência única para seus seguidores. Quando alguém interage com sua publicação no Instagram, é gerado automaticamente um ingresso VIP digital e personalizado — com foto, nome, data do evento ou benefício exclusivo.",
   price: "R$ 350,00",
   priceValue: 350,
   category: "Engajamento / Entrada",
-  segments: ["Infoprodutores", "Criadores de Conteúdo"],
+  segments: ["Infoprodutores", "Criadores de Conteúdo", "E-commerce", "Afiliados"],
   image: leadFlowHero,
-  features: ["Até 5mil leads", "Fluxo personalizado e automatizado", "Direcionamento estratégico"]
+  features: ["Até 5.000 leads", "Ingresso VIP personalizado", "Automação completa", "Experiência premium"]
 };
 
 export const LeadFlowProduct = () => {
@@ -107,7 +108,7 @@ export const LeadFlowProduct = () => {
                 Engajamento / Entrada
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                LeadFlow: transforme seguidores em leads qualificados no Instagram
+                LeadFlow: o ingresso VIP que transforma seguidores em leads qualificados
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Engaje, capture e direcione com o fluxo inteligente que escala seus resultados.
@@ -147,10 +148,10 @@ export const LeadFlowProduct = () => {
             O que é o LeadFlow?
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-            Ative e engaje sua audiência desde o primeiro toque com o LeadFlow — uma solução estratégica que cria um fluxo inteligente e automatizado para transformar seguidores em leads qualificados no Instagram. Com ele, você gera interação imediata, direcionamento estratégico e uma entrada personalizada para conteúdos, ofertas ou comunidades exclusivas.
+            Quando um seguidor interage com sua publicação no Instagram, o LeadFlow gera automaticamente um ingresso VIP digital e exclusivo. Esse ingresso é personalizado com foto, nome e detalhes do evento, criando uma experiência memorável e um vínculo imediato com sua marca.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Ideal para escalar resultados com até 5 mil leads no plano Basic, garantindo personalização, automações integradas e uma experiência que combina engajamento e performance.
+            Esse ingresso é a chave de entrada para o seu funil: ele desperta exclusividade, incentiva a ação imediata e transforma curiosos em leads quentes e engajados.
           </p>
         </div>
       </section>
@@ -220,22 +221,58 @@ export const LeadFlowProduct = () => {
         </div>
       </section>
 
-      {/* Pricing & CTA */}
+      {/* Proof Social */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Marcas e criadores já escalaram seu engajamento com o LeadFlow
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Agora é a sua vez de transformar seguidores em leads de alto valor
+          </p>
+          <div className="bg-gradient-card rounded-2xl p-8 border border-primary/20">
+            <p className="text-muted-foreground italic">
+              "O LeadFlow revolucionou nossa estratégia no Instagram. A experiência do ingresso VIP criou uma conexão única com nossa audiência e aumentou significativamente nossa taxa de conversão."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Urgency/Special Offer */}
+      <section className="py-16 px-4 bg-gradient-subtle">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Ative hoje o LeadFlow e surpreenda sua audiência
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Uma experiência exclusiva que gera leads de verdade
+          </p>
+          <Button 
+            onClick={handleAddToCart}
+            size="lg"
+            className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8 py-4"
+          >
+            Quero meu LeadFlow prioritário →
+          </Button>
+        </div>
+      </section>
+
+      {/* Final CTA */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <Card className="text-center border-primary/20 bg-gradient-card">
             <CardHeader className="pb-8">
               <CardTitle className="text-3xl font-bold text-foreground mb-4">
-                Pronto para começar?
+                Pronto para transformar seguidores em leads de alto valor?
               </CardTitle>
               <CardDescription className="text-lg text-muted-foreground">
-                Comece a gerar leads inteligentes hoje mesmo!
+                A partir de R$ 350,00 (plano Basic até 5.000 leads)
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-8">
               <div className="text-center">
                 <div className="text-5xl font-bold text-primary mb-2">R$ 350,00</div>
-                <p className="text-muted-foreground">A partir de</p>
+                <p className="text-muted-foreground">Planos superiores disponíveis sob consulta</p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -245,19 +282,19 @@ export const LeadFlowProduct = () => {
                   className="bg-gradient-primary hover:opacity-90 transition-opacity"
                 >
                   <Target className="w-5 h-5 mr-2" />
-                  Adicionar ao Carrinho
+                  Ativar LeadFlow agora →
                 </Button>
                 <Button 
                   variant="outline"
                   size="lg"
                   onClick={handleWhatsAppSpecialist}
                 >
-                  Falar com Especialista
+                  Falar com especialista →
                 </Button>
               </div>
               
               <div className="text-center text-sm text-muted-foreground">
-                Marcas e criadores já escalaram seu engajamento com o LeadFlow — agora é a sua vez.
+                Transforme seguidores em leads inteligentes hoje mesmo
               </div>
             </CardContent>
           </Card>
