@@ -23,7 +23,7 @@ const services = [
     price: "R$ 350,00",
     priceValue: 350,
     category: "Engajamento / Entrada",
-    segments: ["Infoprodutores", "Criadores de Conteúdo"],
+    segments: ["Infoprodutores", "Criadores de Conteúdo", "E-commerce", "Afiliados", "Clínicas", "Óticas", "Imobiliárias"],
     image: instagramAutomation,
     features: ["Até 5mil leads", "Fluxo personalizado e automatizado", "Direcionamento estratégico"]
   },

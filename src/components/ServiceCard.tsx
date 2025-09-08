@@ -72,7 +72,7 @@ export const ServiceCard = ({
           className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
           size="lg"
         >
-          {title === "LeadFlow - Instagram" || title === "LeadFlow – WhatsApp" || title === "IAssist – Agente de IA para Atendimento no WhatsApp" ? "Saiba mais" : "Adicionar ao Carrinho"}
+          {title === "Ingresso VIP Digital para Instagram" || title === "LeadFlow - Instagram" || title === "LeadFlow – WhatsApp" || title === "IAssist – Agente de IA para Atendimento no WhatsApp" ? "Saiba mais" : "Adicionar ao Carrinho"}
         </Button>
       </CardFooter>
     </Card>
