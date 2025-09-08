@@ -18,8 +18,8 @@ import iassistHero from "@/assets/iassist-hero.jpg";
 const services = [
   {
     id: 1,
-    title: "LeadFlow - Instagram",
-    description: "Ative e engaje sua audiência desde o primeiro toque com o LeadFlow — uma solução estratégica que cria um fluxo inteligente e automatizado para transformar seguidores em leads qualificados no Instagram.",
+    title: "Ingresso VIP Digital para Instagram",
+    description: "Ative e encante sua audiência desde o primeiro toque com o Ingresso VIP Digital para Instagram — uma solução estratégica que transforma interações em experiências exclusivas. Cada seguidor que engaja com sua publicação recebe um ingresso digital personalizado, com foto, nome e data, criando senso de pertencimento e desejo imediato. Mais do que engajamento, é um fluxo inteligente e automatizado que captura leads qualificados e direciona sua audiência para conteúdos, eventos e ofertas exclusivas",
     price: "R$ 350,00",
     priceValue: 350,
     category: "Engajamento / Entrada",
@@ -98,7 +98,7 @@ export const ServicesLanding = () => {
   });
 
   const handleAddToCart = (service: typeof services[0]) => {
-    if (service.title === "LeadFlow - Instagram") {
+    if (service.title === "Ingresso VIP Digital para Instagram") {
       navigate('/leadflow-instagram');
       return;
     }
