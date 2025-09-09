@@ -49,7 +49,7 @@ const beneficiosChave = [
   {
     icon: TrendingUp,
     title: "Escala: até 2.000 leads no Basic",
-    description: "Capacidade para capturar milhares de leads qualificados"
+    description: "Transforme seguidores que já interagem com você em leads valiosos, prontos para receber suas ofertas e participar dos seus eventos"
   },
   {
     icon: Settings,
@@ -185,10 +185,10 @@ export const LeadFlowProduct = () => {
                 Engajamento / Entrada
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                👉 Ingresso VIP Digital: transforme seguidores em leads qualificados no Instagram
+                Ingresso VIP Digital: transforme seguidores em leads qualificados no Instagram
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                👉 Crie uma experiência exclusiva para sua audiência: ao interagir com sua publicação, cada seguidor recebe um ingresso VIP digital personalizado com foto, nome e data.
+                Crie uma experiência exclusiva para sua audiência: ao interagir com sua publicação, cada seguidor recebe um ingresso VIP digital personalizado com foto, nome e data.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -227,7 +227,7 @@ export const LeadFlowProduct = () => {
                 O que é o Ingresso VIP Digital?
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                👉 O Ingresso VIP Digital é a forma mais clara e impactante de transformar engajamento no Instagram em leads reais. Quando um seguidor interage, ele recebe automaticamente um ingresso digital exclusivo e personalizado.
+                O Ingresso VIP Digital é a forma mais clara e impactante de transformar engajamento no Instagram em leads reais. Quando um seguidor interage, ele recebe automaticamente um ingresso digital exclusivo e personalizado.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Esse ingresso gera pertencimento, desejo e direciona sua audiência para o próximo passo do seu funil.
@@ -249,49 +249,53 @@ export const LeadFlowProduct = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Problema */}
-            <Card className="border-red-200 bg-red-50/50 dark:border-red-800 dark:bg-red-900/20">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-red-700 dark:text-red-300">
-                  <AlertTriangle className="w-6 h-6" />
-                  Problemas Atuais
+            <Card className="border-red-300 bg-red-50 shadow-lg rounded-xl p-6" style={{ backgroundColor: '#FDE8E8', borderColor: '#FCA5A5' }}>
+              <CardHeader className="pb-4">
+                <CardTitle className="flex items-center gap-3 text-2xl font-bold" style={{ color: '#B91C1C' }}>
+                  ⚠️ Problemas Atuais
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-6">
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <p className="text-muted-foreground">Seu público interage mas você não captura leads</p>
+                  <div className="w-3 h-3 rounded-full mt-1.5" style={{ backgroundColor: '#B91C1C' }}></div>
+                  <p className="text-lg leading-relaxed" style={{ color: '#B91C1C' }}>Seu público interage mas você não captura leads</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <p className="text-muted-foreground">Engajamento no Instagram sem estratégia se perde</p>
+                  <div className="w-3 h-3 rounded-full mt-1.5" style={{ backgroundColor: '#B91C1C' }}></div>
+                  <p className="text-lg leading-relaxed" style={{ color: '#B91C1C' }}>Engajamento no Instagram sem estratégia se perde</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <p className="text-muted-foreground">Falta exclusividade que gera desejo real</p>
+                  <div className="w-3 h-3 rounded-full mt-1.5" style={{ backgroundColor: '#B91C1C' }}></div>
+                  <p className="text-lg leading-relaxed" style={{ color: '#B91C1C' }}>Falta exclusividade que gera desejo real</p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Solução */}
-            <Card className="border-green-200 bg-green-50/50 dark:border-green-800 dark:bg-green-900/20">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-green-700 dark:text-green-300">
-                  <CheckCircle className="w-6 h-6" />
-                  Nossa Solução
+            <Card className="border-green-300 bg-green-50 shadow-lg rounded-xl p-6" style={{ backgroundColor: '#E6F4EA', borderColor: '#86EFAC' }}>
+              <CardHeader className="pb-4">
+                <CardTitle className="flex items-center gap-3 text-2xl font-bold" style={{ color: '#1B5E20' }}>
+                  ✅ Nossa Solução
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-6">
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                  <p className="text-muted-foreground">Cada interação gera um lead qualificado</p>
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1B5E20' }}>
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-lg leading-relaxed" style={{ color: '#1B5E20' }}>Cada interação gera um lead qualificado</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                  <p className="text-muted-foreground">Um ingresso VIP digital personalizado para cada seguidor</p>
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1B5E20' }}>
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-lg leading-relaxed" style={{ color: '#1B5E20' }}>Um ingresso VIP digital personalizado para cada seguidor</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-500 mt-0.5" />
-                  <p className="text-muted-foreground">Engajamento com valor, escalável até 2.000 leads no plano Basic</p>
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ backgroundColor: '#1B5E20' }}>
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-lg leading-relaxed" style={{ color: '#1B5E20' }}>Engajamento com valor, escalável até 2.000 leads no plano Basic</p>
                 </div>
               </CardContent>
             </Card>
@@ -370,7 +374,7 @@ export const LeadFlowProduct = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  O seguidor interage com a publicação no Instagram (like, comentário, direct)
+                  O seguidor interage com a publicação no Instagram (direct e comentário)
                 </p>
               </CardContent>
             </Card>
