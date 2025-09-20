@@ -81,8 +81,8 @@ const benefits = [
 
 const leadFlowWhatsAppService = {
   id: 2,
-  title: "LeadFlow – WhatsApp",
-  description: "Ative e capture leads com inteligência usando o LeadFlow – WhatsApp. Essa solução estratégica integra Instagram e WhatsApp para criar um fluxo de entrada otimizado e personalizado.",
+  title: "Ingresso VIP Digital para WhatsApp",
+  description: "Transforme interações no Instagram em conversas qualificadas no WhatsApp. Cada comentário, curtida ou direct vira uma oportunidade real de relacionamento e venda.",
   price: "R$ 497,00",
   priceValue: 497,
   category: "Engajamento / Entrada",
@@ -100,7 +100,7 @@ export const LeadFlowWhatsApp = () => {
   };
 
   const handleWhatsAppSpecialist = () => {
-    const message = "Olá! Gostaria de falar com um especialista sobre o LeadFlow – WhatsApp.";
+    const message = "Olá! Gostaria de falar com um especialista sobre o Ingresso VIP Digital para WhatsApp.";
     const whatsappUrl = `https://wa.me/5514996392637?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -128,10 +128,10 @@ export const LeadFlowWhatsApp = () => {
                 Engajamento / Entrada
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                LeadFlow WhatsApp: transforme interações em conversas e conversas em clientes
+                Ingresso VIP Digital para WhatsApp
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                O fluxo inteligente que conecta seu Instagram ao WhatsApp para capturar e engajar leads com eficiência.
+                Transforme interações no Instagram em conversas qualificadas no WhatsApp. Cada comentário, curtida ou direct vira uma oportunidade real de relacionamento e venda.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -139,7 +139,7 @@ export const LeadFlowWhatsApp = () => {
                   size="lg"
                   className="bg-gradient-primary hover:opacity-90 transition-opacity"
                 >
-                  Quero meu LeadFlow no WhatsApp →
+                  Quero meu Ingresso VIP →
                 </Button>
                 <Button 
                   variant="outline"
@@ -166,7 +166,7 @@ export const LeadFlowWhatsApp = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Como funciona o LeadFlow WhatsApp?
+              Como funciona o Ingresso VIP Digital?
             </h2>
             <p className="text-xl text-muted-foreground">
               Fluxo simples e inteligente em 3 passos
@@ -211,10 +211,10 @@ export const LeadFlowWhatsApp = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-            O que é o LeadFlow WhatsApp?
+            O que é o Ingresso VIP Digital para WhatsApp?
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            O <strong>LeadFlow – WhatsApp</strong> é uma solução estratégica que integra <strong>Instagram e WhatsApp</strong> para criar um fluxo de entrada otimizado e personalizado. O lead interage com sua marca no Instagram, recebe um convite personalizado via WhatsApp e inicia uma conversa qualificada, já segmentada, pronta para funis, ofertas, agendamentos ou suporte.
+            O <strong>Ingresso VIP Digital para WhatsApp</strong> é uma solução estratégica que integra <strong>Instagram e WhatsApp</strong> para criar um fluxo de entrada otimizado e personalizado. O lead interage com sua marca no Instagram, recebe um convite personalizado via WhatsApp e inicia uma conversa qualificada, já segmentada, pronta para funis, ofertas, agendamentos ou suporte.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             Ideal para automatizar a captação inicial de até <strong>250 leads no plano Basic</strong>, com mensagens disparadas pela API Oficial da Meta, respeitando os limites diários da plataforma.
@@ -232,7 +232,7 @@ export const LeadFlowWhatsApp = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Por que escolher o LeadFlow WhatsApp?
+              Por que escolher o Ingresso VIP Digital?
             </h2>
             <p className="text-xl text-muted-foreground">
               Benefícios que transformam seu engajamento em conversões reais
