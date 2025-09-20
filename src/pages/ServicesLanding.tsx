@@ -29,8 +29,8 @@ const services = [
   },
   {
     id: 2,
-    title: "LeadFlow – WhatsApp", 
-    description: "Ative e capture leads com inteligência usando o LeadFlow – WhatsApp. Integra Instagram e WhatsApp para criar um fluxo de entrada otimizado e personalizado.",
+    title: "Ingresso VIP Digital para WhatsApp", 
+    description: "Transforme interações no Instagram em conversas qualificadas no WhatsApp. Cada comentário, curtida ou direct vira uma oportunidade real de relacionamento e venda.",
     price: "R$ 497,00",
     priceValue: 497,
     category: "Engajamento / Entrada",
@@ -103,7 +103,7 @@ export const ServicesLanding = () => {
       return;
     }
     
-    if (service.title === "LeadFlow – WhatsApp") {
+    if (service.title === "Ingresso VIP Digital para WhatsApp") {
       navigate('/leadflow-whatsapp');
       return;
     }
