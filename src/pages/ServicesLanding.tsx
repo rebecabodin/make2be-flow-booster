@@ -14,6 +14,7 @@ import engagementAutomation from "@/assets/engagement-automation.jpg";
 import leadCaptureBasic from "@/assets/lead-capture-basic.jpg";
 import leadCaptureAdvanced from "@/assets/lead-capture-advanced.jpg";
 import iassistHero from "@/assets/iassist-hero.jpg";
+import leadbrainHubHero from "@/assets/leadbrain-hub-hero.jpg";
 
 const services = [
   {
@@ -81,6 +82,17 @@ const services = [
     segments: ["E-commerce", "Infoprodutores", "Varejo", "Clínicas", "Imobiliárias", "Óticas", "Academias"],
     image: iassistHero,
     features: ["Atendimento 24h", "Respostas humanizadas", "Escalabilidade", "API Oficial e não Oficial"]
+  },
+  {
+    id: 7,
+    title: "LeadBrain – Hub de Leads Modular",
+    description: "Centralize e automatize toda a jornada do seu lead — da captação ao pós-venda — com o LeadBrain. Um hub inteligente e modular que conecta seus canais, qualifica contatos com IA e entrega dados estratégicos para o crescimento do seu negócio. Deixe a automação cuidar das tarefas repetitivas, enquanto você foca no que realmente importa: gerar oportunidades reais e escalar resultados. Ideal para times que buscam mais eficiência, previsibilidade e performance comercial.",
+    price: "R$ 997,00",
+    priceValue: 997,
+    category: "Marketing / Vendas",
+    segments: ["Consultorias e Agências", "Startups", "Clínicas e Franquias", "Times Comerciais B2B e SaaS"],
+    image: leadbrainHubHero,
+    features: ["Hub modular centralizado", "Automação completa da jornada", "Qualificação com IA", "Módulos sob demanda"]
   }
 ];
 
