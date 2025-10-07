@@ -126,11 +126,7 @@ export const ServicesLanding = () => {
     }
     
     if (service.title === "LeadBrain – Hub de Leads Modular") {
-      // Apenas abre o popup com CTA "Saiba mais"
-      setCheckoutPopup({
-        isOpen: true,
-        service: service
-      });
+      navigate('/leadbrain');
       return;
     }
     
