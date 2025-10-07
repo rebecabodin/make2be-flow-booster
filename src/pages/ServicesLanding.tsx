@@ -19,6 +19,17 @@ import leadbrainHubHero from "@/assets/leadbrain-hub-hero.jpg";
 const services = [
   {
     id: 1,
+    title: "LeadBrain – Hub de Leads Modular",
+    description: "Centralize e automatize toda a jornada do seu lead — da captação ao pós-venda — com o LeadBrain. Um hub inteligente e modular que conecta seus canais, qualifica contatos com IA e entrega dados estratégicos para o crescimento do seu negócio. Deixe a automação cuidar das tarefas repetitivas, enquanto você foca no que realmente importa: gerar oportunidades reais e escalar resultados. Ideal para times que buscam mais eficiência, previsibilidade e performance comercial.",
+    price: "R$ 997,00",
+    priceValue: 997,
+    category: "Marketing / Vendas",
+    segments: ["Consultorias e Agências", "Startups", "Clínicas e Franquias", "Times Comerciais B2B e SaaS"],
+    image: leadbrainHubHero,
+    features: ["Hub modular centralizado", "Automação completa da jornada", "Qualificação com IA", "Módulos sob demanda"]
+  },
+  {
+    id: 2,
     title: "Ingresso VIP Digital para Instagram",
     description: "Ative e encante sua audiência desde o primeiro toque com o Ingresso VIP Digital para Instagram — uma solução estratégica que transforma interações em experiências exclusivas. Cada seguidor que engaja com sua publicação recebe um ingresso digital personalizado, com foto, nome e data, criando senso de pertencimento e desejo imediato. Mais do que engajamento, é um fluxo inteligente e automatizado que captura leads qualificados e direciona sua audiência para conteúdos, eventos e ofertas exclusivas",
     price: "R$ 350,00",
@@ -29,7 +40,7 @@ const services = [
     features: ["Até 5mil leads", "Fluxo personalizado e automatizado", "Direcionamento estratégico"]
   },
   {
-    id: 2,
+    id: 3,
     title: "Ingresso VIP Digital para WhatsApp", 
     description: "Transforme interações no Instagram em conversas qualificadas no WhatsApp. Cada comentário, curtida ou direct vira uma oportunidade real de relacionamento e venda.",
     price: "R$ 497,00",
@@ -40,7 +51,7 @@ const services = [
     features: ["Até 250 leads", "API Oficial Meta", "Fluxo Instagram + WhatsApp"]
   },
   {
-    id: 3,
+    id: 4,
     title: "Fluxo de Engajamento para Comentários",
     description: "Automação inteligente que responde usuários que comentam em posts, direcionando-os estrategicamente para o funil de vendas.",
     price: "R$ 500,00",
@@ -51,7 +62,7 @@ const services = [
     features: ["Resposta automática", "Segmento técnico incluído", "Configuração Manychat"]
   },
   {
-    id: 4,
+    id: 5,
     title: "Captação de Leads - Boas-Vindas WhatsApp",
     description: "Sistema completo de automação para envio de mensagens iniciais via WhatsApp após captação de lead, incluindo integração com LP.",
     price: "R$ 3.000,00",
@@ -62,7 +73,7 @@ const services = [
     features: ["Até 5mil leads", "Integração LP + WhatsApp", "Webhook + N8N + Cloud API"]
   },
   {
-    id: 5,
+    id: 6,
     title: "Captação Avançada - Boas-Vindas + Perseguição",
     description: "Solução premium incluindo mensagem inicial e sequência completa de follow-up automatizado via WhatsApp para maximizar conversões.",
     price: "R$ 4.000,00",
@@ -73,7 +84,7 @@ const services = [
     features: ["Até 5mil leads", "Sequência de follow-up", "Automação avançada completa"]
   },
   {
-    id: 6,
+    id: 7,
     title: "IAssist – Agente de IA para Atendimento no WhatsApp",
     description: "O seu atendente digital inteligente, disponível 24h por dia no WhatsApp, que responde dúvidas, qualifica leads e direciona clientes para os fluxos certos com agilidade e precisão.",
     price: "R$ 1.200,00",
@@ -82,17 +93,6 @@ const services = [
     segments: ["E-commerce", "Infoprodutores", "Varejo", "Clínicas", "Imobiliárias", "Óticas", "Academias"],
     image: iassistHero,
     features: ["Atendimento 24h", "Respostas humanizadas", "Escalabilidade", "API Oficial e não Oficial"]
-  },
-  {
-    id: 7,
-    title: "LeadBrain – Hub de Leads Modular",
-    description: "Centralize e automatize toda a jornada do seu lead — da captação ao pós-venda — com o LeadBrain. Um hub inteligente e modular que conecta seus canais, qualifica contatos com IA e entrega dados estratégicos para o crescimento do seu negócio. Deixe a automação cuidar das tarefas repetitivas, enquanto você foca no que realmente importa: gerar oportunidades reais e escalar resultados. Ideal para times que buscam mais eficiência, previsibilidade e performance comercial.",
-    price: "R$ 997,00",
-    priceValue: 997,
-    category: "Marketing / Vendas",
-    segments: ["Consultorias e Agências", "Startups", "Clínicas e Franquias", "Times Comerciais B2B e SaaS"],
-    image: leadbrainHubHero,
-    features: ["Hub modular centralizado", "Automação completa da jornada", "Qualificação com IA", "Módulos sob demanda"]
   }
 ];
 
@@ -122,6 +122,15 @@ export const ServicesLanding = () => {
     
     if (service.title === "IAssist – Agente de IA para Atendimento no WhatsApp") {
       navigate('/iassist');
+      return;
+    }
+    
+    if (service.title === "LeadBrain – Hub de Leads Modular") {
+      // Apenas abre o popup com CTA "Saiba mais"
+      setCheckoutPopup({
+        isOpen: true,
+        service: service
+      });
       return;
     }
     
